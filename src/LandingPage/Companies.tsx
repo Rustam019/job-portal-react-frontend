@@ -1,16 +1,22 @@
-import Marquee from "react-fast-marquee";
+import { companies } from "../Data/Data";
 
 
 const Companies = () => {
-    return (<div className="mt-20 pb-5">
-        <div className="text-4xl text-center font-semibold text-mine-shaft-100">
-            Trusted by <span className="text-bright-sun-400">1000+</span> companies
-        </div>
-        <Marquee>
-            I can be a React component, multiple React components, or just some text.
-        </Marquee>
+  return (
+    <div className="mt-20 pb-5">
+      <div className="text-4xl text-center mb-10 font-semibold text-mine-shaft-100 ">Trusted by
+        <span className="text-bright-sun-400"> 1000+ </span> Companies</div>
+
+      <div className="animate-marquee flex gap-2 pause-on-hover">
+        {
+        companies.map((company, index) => 
+        <div key={index} className="mx-8 px-2 py-1 hover:bg-mine-shaft-600 cursor-pointer rounded-lg ">
+          <img className="h-14" src={`/Companies/${company}.png`} alt={company} />
+        </div>)
+        }
+      </div>
     </div>
-    )
+  );
 }
 
-export default Companies;
+export default Companies

@@ -3,7 +3,11 @@ const jobCategories = [
     {"name": "dreamJob", desc:"Software Engineer", job: "900"},
     {"name":  "dreamJob", desc: "Product Manager", job: "1k"},
     {"name":  "dreamJob", desc:"Designer", job: "10k"},
-    {"name":  "dreamJob", desc: "Data Scientist", job: "20k"}
+    {"name":  "dreamJob", desc: "Data Scientist", job: "20k"},
+    {"name": "dreamJob", desc:"Engineer", job: "900"},
+    {"name":  "dreamJob", desc: "Manager", job: "1k"},
+    {"name":  "dreamJob", desc:"Team Lead", job: "10k"},
+    {"name":  "dreamJob", desc: "Data Engineer", job: "20k"}
 ];
 
 const work = [

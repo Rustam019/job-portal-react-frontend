@@ -1,0 +1,15 @@
+import { jobList } from "../Data/JobsData"
+import JobCard from "../FindJobs/JobCard"
+
+
+const CompanyJob = () => {
+    return (
+        <div className="flex mt-5 gap-5 flex-wrap">
+            {
+                jobList.map((job: any, index) => <JobCard key={index} {...job} />)
+            }
+        </div>
+    )
+}
+
+export default CompanyJob

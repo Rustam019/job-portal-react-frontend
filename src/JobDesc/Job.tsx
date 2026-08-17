@@ -5,7 +5,7 @@ import { card, desc, skills } from '../Data/JobDescData'
 //@ts-ignore
 import DOMPurify from 'dompurify'
 
-const JobDesc = () => {
+const Job = (props:any) => {
     const data = DOMPurify.sanitize(desc);
     return (
         <div className='w-2/3 mx-2'>
@@ -21,9 +21,9 @@ const JobDesc = () => {
                 </div>
                 <div className='flex flex-col gap-2 items-center'>
                     <Link to="/apply-job">
-                        <Button className="!text-bright-sun-400" size="sm" variant="light" >Apply </Button>
+                        <Button className="!text-bright-sun-400" size="sm" variant="light" >{props.edit ? "Edit":"Apply"} </Button>
                     </Link>
-                    <IconBookmark className="cursor-pointer text-bright-sun-400" stroke={1.5} />
+                {props.edit ? <Button color='red.4' size='sm' variant='outline'>Delete</Button> : <IconBookmark className='cursor-pointer text-bright-sun-400' />}
                 </div>
             </div>
             <Divider my="xl" />
@@ -69,7 +69,7 @@ const JobDesc = () => {
                             <div className="text-mine-shaft-300">10K+ Employees </div>
                         </div>
                     </div>
-                        <Link to="">
+                        <Link to="/company">
                             <Button className="!text-bright-sun-400" variant="light" >Company Page </Button>
                         </Link>
                     </div>
@@ -79,4 +79,4 @@ const JobDesc = () => {
     )
 }
 
-export default JobDesc
+export default Job;

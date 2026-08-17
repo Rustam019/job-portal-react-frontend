@@ -1,8 +1,10 @@
+
 import { jobList } from "../Data/Data";
 import JobCard from "./JobCard";
 import Sort from "./Sort";
 
 const Jobs = () => {
+
     return (
         <div className="p-5">
             <div className="flex justify-between">
@@ -12,9 +14,9 @@ const Jobs = () => {
                 </div>
             </div>
             <div className="mt-10 flex flex-wrap gap-5">
-            {
-                jobList.map((job, key) => <JobCard key={key} {...job} />)
-            }
+                {
+                    jobList.map((job, key) => <JobCard key={key} {...job} />)
+                }
             </div>
         </div>
     );
